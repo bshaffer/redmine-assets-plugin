@@ -1,11 +1,16 @@
-= Assets plugin for redmine
+Assets plugin for redmine
+=========================
 
 Provides a central location to view all your project's assets
 
-= Requirements
+Requirements
+------------
+
 * Rails 2.2.1 or greater
 
-== Installation 
+Installation 
+------------
+
 0. Follow the Redmine plugin installation steps at: http://www.redmine.org/wiki/redmine/Plugins 
 1. Cd to your redmine vendor/plugins dir.
 2. Git-clone the plugin from this repo into a folder in there (git clone git://github.com/bshaffer/redmine-assets-plugin.git redmine_assets_plugin)
@@ -17,7 +22,8 @@ Provides a central location to view all your project's assets
 
 NOTE: the plugin directory *has* to be "redmine_assets_plugin"
 
-== Config
+Config
+------
 
 There are currently three supported asset types: `Issues`, `Messages`, and `Documents`.  `Files` are not supported,
 as this module should be used *instead* of the Files module.
