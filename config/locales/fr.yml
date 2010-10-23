@@ -1,45 +1,45 @@
 #language file for fr - post rails 2.2.2
 fr:
-  label_todo_plural: Tâches
-  my_todos_title: Mes Tâches
+  label_asset_plural: Tâches
+  assets_title: Mes Tâches
 
-  todo_sort_no_project_error: "impossible de trier sans un projet!"
-  todo_project_not_found_error: "Le Projet demandé n'existe pas!"
-  todo_new_missing_update_target_error: "Vous devez spécifier un update_target!!"
+  asset_sort_no_project_error: "impossible de trier sans un projet!"
+  asset_project_not_found_error: "Le Projet demandé n'existe pas!"
+  asset_new_missing_update_target_error: "Vous devez spécifier un update_target!!"
 
-  mytodos_heading: Mes Tâches Personnelles
-  mytodos_edit_project_tooltip: "Editer les tâches pour ce projet"
+  assets_heading: Mes Tâches Personnelles
+  assets_edit_project_tooltip: "Editer les tâches pour ce projet"
 
-  todo_new_done_link: Terminer l'ajout de Tâche
-  todo_new_due_label: Date d'échéance
-  todo_new_or_label: ou
-  todo_new_create_button: Créer une Tâche
-  todo_new_issue_tooltip: se rapporte à
-  todo_new_assign_to_tooltip: assigner à
+  asset_new_done_link: Terminer l'ajout de Tâche
+  asset_new_due_label: Date d'échéance
+  asset_new_or_label: ou
+  asset_new_create_button: Créer une Tâche
+  asset_new_issue_tooltip: se rapporte à
+  asset_new_assign_to_tooltip: assigner à
 
-  todos_project_heading: Tâches pour
-  todos_print_button_tooltip: Imprimer cette liste
+  assets_project_heading: Tâches pour
+  assets_print_button_tooltip: Imprimer cette liste
 
-  todo_unmark_tooltip: Marquer cette tâches (et ses fils) comme Incomplète
-  todo_mark_tooltip: Marquer cette tâche (et ses fils) comme Terminée
-  todo_add_child_tooltip: 'ajouter un fils à cette tâche'
-  todo_delete_tooltip: effacer cette tâche (et ses fils!)
+  asset_unmark_tooltip: Marquer cette tâches (et ses fils) comme Incomplète
+  asset_mark_tooltip: Marquer cette tâche (et ses fils) comme Terminée
+  asset_add_child_tooltip: 'ajouter un fils à cette tâche'
+  asset_delete_tooltip: effacer cette tâche (et ses fils!)
 
-  todo_due_label: "Date d'échéance:"
-  todo_assigned_label: "Assigné à:"
-  todo_ref_label: "Ref:"
+  asset_due_label: "Date d'échéance:"
+  asset_assigned_label: "Assigné à:"
+  asset_ref_label: "Ref:"
 
-  project_module_todo_lists: Liste de Tâches
+  project_module_asset_lists: Liste de Tâches
 
-  permission_view_todos: Voir les Listes de Tâches
-  permission_edit_todos: Editer les Listes de Tâches
-  permission_use_personal_todos: Utiliser les Listes de Tâches personnelles
+  permission_view_assets: Voir les Listes de Tâches
+  permission_edit_assets: Editer les Listes de Tâches
+  permission_use_personal_assets: Utiliser les Listes de Tâches personnelles
 
-  label_related_todos: Tâches liées
+  label_related_assets: Tâches liées
 
-  todo_not_found_error: "La Tâche demandée n'existe pas!"
+  asset_not_found_error: "La Tâche demandée n'existe pas!"
 
-  label_todo: Tâche
-  todo_status_done: Terminé
-  todo_status_new: Nouveau
-  todo_status_updated: Mise à jour
+  label_asset: Tâche
+  asset_status_done: Terminé
+  asset_status_new: Nouveau
+  asset_status_updated: Mise à jour

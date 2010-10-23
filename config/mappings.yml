@@ -7,7 +7,7 @@ Document:
     name:     name
     table:    enumerations
     
-  joins:      enumerations on category_id = enumerations.id AND type='DocumentCategory'
+  joins:      enumerations on documents.category_id = enumerations.id AND type='DocumentCategory'
   
 Issue:
   category:
@@ -16,7 +16,7 @@ Issue:
     name:     name
     table:    issue_categories
 
-  joins:      issue_categories on category_id = issue_categories.id
+  joins:      issue_categories on issues.category_id = issue_categories.id
       
 Message:
   category:

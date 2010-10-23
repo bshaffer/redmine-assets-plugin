@@ -1,36 +1,36 @@
 #language file for it - pre rails 2.2.2
 it:
-  label_todo_plural: ToDo
-  my_todos_title: Miei Todo
+  label_asset_plural: ToDo
+  assets_title: Miei Todo
 
-  todo_sort_no_project_error: "Impossibile ordinare senza un progetto!"
-  todo_project_not_found_error: "Progetto non trovato!"
-  todo_new_missing_update_target_error: "Hai bisogno di un update_target!!"
+  asset_sort_no_project_error: "Impossibile ordinare senza un progetto!"
+  asset_project_not_found_error: "Progetto non trovato!"
+  asset_new_missing_update_target_error: "Hai bisogno di un update_target!!"
 
-  mytodos_heading: Todo personali
-  mytodos_edit_project_tooltip: "Modifica i todo per questo progetto"
+  assets_heading: Todo personali
+  assets_edit_project_tooltip: "Modifica i asset per questo progetto"
 
-  todo_new_done_link: Aggiunta todo completata
-  todo_new_due_label: Previsto per
-  todo_new_or_label: o
-  todo_new_create_button: Crea Todo
-  todo_new_issue_tooltip: riferito a
-  todo_new_assign_to_tooltip: assegna a
+  asset_new_done_link: Aggiunta asset completata
+  asset_new_due_label: Previsto per
+  asset_new_or_label: o
+  asset_new_create_button: Crea Todo
+  asset_new_issue_tooltip: riferito a
+  asset_new_assign_to_tooltip: assegna a
 
-  todos_project_heading: Todo per
-  todos_print_button_tooltip: Stampa questa lista
+  assets_project_heading: Todo per
+  assets_print_button_tooltip: Stampa questa lista
 
-  todo_unmark_tooltip: Marca quest todo (e quelli collegati) come Incompleto
-  todo_mark_tooltip: Marca questo todo (e quelli collegati) come Completato
-  todo_add_child_tooltip: 'aggiungi sotto-todo collegato a questo todo'
-  todo_delete_tooltip: cancella il todo (e quelli collegati!)
+  asset_unmark_tooltip: Marca quest asset (e quelli collegati) come Incompleto
+  asset_mark_tooltip: Marca questo asset (e quelli collegati) come Completato
+  asset_add_child_tooltip: 'aggiungi sotto-asset collegato a questo asset'
+  asset_delete_tooltip: cancella il asset (e quelli collegati!)
 
-  todo_due_label: "Previsto per:"
-  todo_assigned_label: "Assegnato a:"
-  todo_ref_label: "Rif:"
+  asset_due_label: "Previsto per:"
+  asset_assigned_label: "Assegnato a:"
+  asset_ref_label: "Rif:"
 
-  project_module_todo_lists: Lista todo
+  project_module_asset_lists: Lista asset
 
-  permission_view_todos: Mostra lista todo
-  permission_edit_todos: Modifica lista todo
-  permission_use_personal_todos: Usa lista todo personale
+  permission_view_assets: Mostra lista asset
+  permission_edit_assets: Modifica lista asset
+  permission_use_personal_assets: Usa lista asset personale

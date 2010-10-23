@@ -1,40 +1,40 @@
 #Todos Russian locale File for Rails >= 2.2.2
 ru:
-  label_todo_plural: Списки задач
-  project_todos_title: Заметки
-  my_todos_title: Заметки к выполнению
+  label_asset_plural: Списки задач
+  project_assets_title: Заметки
+  assets_title: Заметки к выполнению
   
-  todo_sort_no_project_error: "нет возможности сортировки без указания проекта"
-  todo_project_not_found_error: "Проект не найден!"
-  todo_new_missing_update_target_error: "Вам необходимо update_target!!"
+  asset_sort_no_project_error: "нет возможности сортировки без указания проекта"
+  asset_project_not_found_error: "Проект не найден!"
+  asset_new_missing_update_target_error: "Вам необходимо update_target!!"
   
-  mytodos_heading: Мои личные заметки к выполнению
-  mytodos_edit_project_tooltip: "Редактирование заметок для текущего проекта"
+  assets_heading: Мои личные заметки к выполнению
+  assets_edit_project_tooltip: "Редактирование заметок для текущего проекта"
   
-  todo_new_done_link: Добавление заметки выполнено
-  todo_new_due_label: к дате
-  todo_new_or_label: или
-  todo_new_create_button: Создать заметку
-  todo_new_issue_tooltip: связана с
-  todo_new_assign_to_tooltip: назначена на
+  asset_new_done_link: Добавление заметки выполнено
+  asset_new_due_label: к дате
+  asset_new_or_label: или
+  asset_new_create_button: Создать заметку
+  asset_new_issue_tooltip: связана с
+  asset_new_assign_to_tooltip: назначена на
   
-  todos_project_heading: Заметки для
-  todos_print_button_tooltip: Печать текущего списка
+  assets_project_heading: Заметки для
+  assets_print_button_tooltip: Печать текущего списка
   
-  todo_unmark_tooltip: Пометить эту заметку (и все подчиненные) как Невыполненные
-  todo_mark_tooltip: Пометить эту заметку (и все подчиненные) как Выполненную
-  todo_add_child_tooltip: 'добавить подзаметку к текущей'
-  todo_delete_tooltip: Удалить текущую заметку (и подчиненные)
+  asset_unmark_tooltip: Пометить эту заметку (и все подчиненные) как Невыполненные
+  asset_mark_tooltip: Пометить эту заметку (и все подчиненные) как Выполненную
+  asset_add_child_tooltip: 'добавить подзаметку к текущей'
+  asset_delete_tooltip: Удалить текущую заметку (и подчиненные)
   
-  todo_due_label: "К дате:"
-  todo_assigned_label: "Назначена на:"
-  todo_ref_label: "Связана с:"
+  asset_due_label: "К дате:"
+  asset_assigned_label: "Назначена на:"
+  asset_ref_label: "Связана с:"
   
-  project_module_todo_lists: Списки заметок
+  project_module_asset_lists: Списки заметок
   
-  permission_view_project_todo_lists: Просмотр списков заметок
-  permission_edit_project_todo_lists: Редактирование списков заметок
-  permission_use_personal_todo_lists: Использовать свой список заметок
+  permission_view_project_asset_lists: Просмотр списков заметок
+  permission_edit_project_asset_lists: Редактирование списков заметок
+  permission_use_personal_asset_lists: Использовать свой список заметок
   
   
   

@@ -4,39 +4,41 @@
 class AssetsController < ApplicationController
 
   before_filter :authorize, :asset_types
+  before_filter :find_project, :only => [:index, :by_type]
   
   def index
-    find_project
-    
     @types = types_for_project #Attachment.find(:all, :group => "container_type", :select => "container_type" ).collect(&:container_type)
   end
   
   def by_type
-    find_project
     @type     = params[:type];
+    
+    # Forward 404 if type does not exist in the mapping
     @mappings[@type].nil? rescue return render :file => "#{RAILS_ROOT}/public/404.html", :status => 404
 
     @mapping  = @mappings[@type];
-    @table    = (eval @type)
-
-    table_name    = @table.table_name
+    table_name    = (eval @type).table_name
     @options  = {:deletable => true, :author => true}
+    
+    # Every type will have this join
     joins      = ["INNER JOIN #{table_name} ON #{table_name}.id = container_id and container_type = '#{@type}'"]
     
+    # Add extra joins if applicable (for categories or project ID)
     if !@mapping['joins'].nil?
       joins << "INNER JOIN #{@mapping['joins']}"
     end
-        
+    
+    # Every type will have these conditions
     conditions = "container_type = '#{@type}' AND #{@mapping['project_id']} = #{@project.id}";
     
+    # If a category mapping exists
     if(!@mapping['category'].nil?)
-      # joins  << "LEFT JOIN #{@mapping['category']['table']} on #{@mapping['category']['id']} = #{@mapping['category']['table']}.id"
-      
       @assets   = Attachment.find(:all, {
         :conditions => conditions, 
         :joins      => joins.join(' '),
         :order      => "#{@mapping['category']['name']} ASC, attachments.filename ASC"})
 
+    # If a category mapping doesnt exist
     else
       @assets   = Attachment.find(:all, {
         :conditions => conditions, 
@@ -83,7 +85,6 @@ class AssetsController < ApplicationController
          @mappings[type]['project_id'] = "#{table}.project_id"
        end
 
-        
        if !mapping['category'].nil? && mapping['category']['relation'].nil?
         @mappings[type]['category']['relation'] = 'category'
        end
