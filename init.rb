@@ -6,7 +6,7 @@ Redmine::Plugin.register :redmine_priorities_plugin do
   description 'Provides a central location to view all your project\'s assets.'
   version '0.0.1'
   
-  project_module :asset_lists do
+  project_module :assets_list do
     permission :view_asset, {:assets => [:index, :by_type] }
       
     permission :edit_asset,

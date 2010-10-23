@@ -1,7 +1,16 @@
 Assets plugin for redmine
 =========================
 
-Provides a central location to view all your project's assets
+Provides a central location to view all your project's assets.
+
+Overview
+--------
+
+This will enable the `Assets` tab in your project.  The assets tab groups assets by your different asset types.
+There are currently three supported asset types: `Issues`, `Messages`, and `Documents`.  `Files` are not supported,
+as this module should be used *instead* of the Files module.  Only the types that have uploaded files in the 
+current project will be displayed.  Drilling down into an asset type will show an alphabetical list of assets,
+grouped by category if applicable.
 
 Requirements
 ------------
@@ -22,13 +31,19 @@ Installation
 
 NOTE: the plugin directory *has* to be "redmine_assets_plugin"
 
+Activation
+----------
+
+To activate in your project:
+
+* Navigate to your project's "Settings" page
+* Under the "Modules" tab, check the box next to "Assets list" and save
+
 Config
 ------
 
-There are currently three supported asset types: `Issues`, `Messages`, and `Documents`.  `Files` are not supported,
-as this module should be used *instead* of the Files module.
-
-The mappings to the content type's project_ids and categories are found in config/mappings.yml.  
+You can configure additional asset types via the `config/mappings.yml` file.  Mappings to the 
+content type's project_ids and categories are found here.
 Contact me or submit a pull request for additional asset types.  
 Leaving out the "category" key in `mappings.yml` will disable categorization.  
 Leaving out the "project_id" key will default to *project_id*.
