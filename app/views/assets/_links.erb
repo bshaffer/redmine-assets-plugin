@@ -1,13 +1,14 @@
-<% if by_category %>
-  <%= category_id = nil %>
+<% if category_relation %>
+  <%= current_category = nil %>
 <% end %>
 
 <div class="attachments">
 <% for attachment in attachments %>
-  <% if by_category %>
-    <% if(category_id != attachment.container[:category_id]) %>
-      <h3><%= attachment.container.category %></h3>
-      <% category_id = attachment.container[:category_id] %>
+  <% if category_relation %>
+    <% category = eval "attachment.container.#{category_relation}" %>
+    <% if(current_category != category.to_s) %>
+      <h3><%= category.to_s %></h3>
+      <% current_category = category.to_s %>
     <% end %>
   <% end %>
 

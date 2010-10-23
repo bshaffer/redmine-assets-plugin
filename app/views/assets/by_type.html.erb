@@ -6,8 +6,8 @@
 <div id="project-assets">
   <h2><%= @type %> <%= l(:assets_project_heading) %> <%= @project.name %></h2>
   <div style="" >
-
-    <%= render :partial => 'attachments/links', :locals => {:attachments => @assets, :options => @options} %>
+    
+    <%= render :partial => 'assets/links', :locals => {:attachments => @assets, :options => @options, :category_relation => @mapping['category'].nil? ? nil : @mapping['category']['relation']} %>
     
   </div>
 </div>
