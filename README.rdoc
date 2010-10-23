@@ -1,0 +1,19 @@
+= Assets plugin for redmine
+
+Provides a central location to view all your project's assets in a single location
+
+= Requirements
+* Redmine 0.8.5 or later (may work on earlier versions, but not tested for it) - Works best on 0.9.x
+* Rails 2.2.1 or greater (NOTE - if you are on 0.8.x, you will have to manually install a newer rails version & edit your config/enviroment.rb)
+
+== Installation 
+0. Follow the Redmine plugin installation steps at: http://www.redmine.org/wiki/redmine/Plugins 
+1. Cd to your redmine vendor/plugins dir.
+2. Git-clone the plugin from this repo into a folder in there (git clone git://github.com/bshaffer/redmine-assets-plugin.git redmine_assets_plugin)
+3. Run the plugin migrations +rake db:migrate_plugins+
+4. Restart your Redmine web servers (e.g. mongrel, thin, mod_rails)
+5. Login to your Redmine install as an Administrator
+6. Setup the permissions for the assets module for your roles
+7. Enable the module on a per-project basis as needed.
+
+NOTE: the plugin directory *has* to be "redmine_assets_plugin"

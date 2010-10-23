@@ -1,0 +1,102 @@
+<% todos_controller = (controller.controller_name == 'issues') ? 'todos' : controller.controller_name %>
+<% 
+  parent_object = todo.todoable 
+  raise unless parent_object
+%>
+<% editable ||= false %>
+
+
+
+<span class="todo-controls">
+  <% if editable then %>
+  
+    <% todo_issue = ((@issue && @issue.id) || todo.issue_id) %>
+    <% todo_class = todo.done ? 'icon-restore' : 'icon-done' %>
+    <% todo_img = todo.done ? 
+                      image_tag('cancel.png', :title => l(:todo_unmark_tooltip)) :
+                      image_tag('true.png', :title => l(:todo_mark_tooltip), :size=>'13x13') 
+    %>
+    
+    <%= link_to_remote( todo_img,
+          :url => polymorphic_url([parent_object,todo], :action => :toggle_complete), :method => :post,
+          :html => {:class => todo_class} 
+         )
+    %><%= link_to_remote( image_tag('add.png', :title => l(:todo_add_child_tooltip)), 
+      :url => new_polymorphic_url( [parent_object,:todo], :parent_id => todo, :issue_id => todo_issue), :method => :get,
+         
+      #{ :controller => "#{'projects/' + todo.project.identifier.to_s + '/' if todo.project}#{'issues/' + todo_issue.to_s + '/' if todo_issue}#{todos_controller}/#{todo.id}",     :action => 'new' },
+      :html => {:class => 'icon-new'}, 
+      :update => "todo#{todo.id}-new-box" ) 
+        
+    %><%= link_to_remote( image_tag('edit.png', :title => 'Edit'), 
+      :url => edit_polymorphic_url( [parent_object,todo]), :method => :get,
+      :html => {:class => 'icon-edit'}, 
+      :update => "todo_#{todo.id}" )
+      
+    %><%= link_to_remote( image_tag('delete.png', :title => l(:todo_delete_tooltip)), 
+      :url => polymorphic_url([ parent_object,todo]), :method => :delete,
+      :confirm => l(:text_are_you_sure), :html => {:class => 'icon-delete'}, 
+      :update => "todo_#{todo.id}" ) 
+      
+    %>
+  
+  <% else %>
+    <%=
+      if todo.parent_id.nil? || todo.children.any? 
+          #image_tag('sub.gif')
+          image_tag('bullet_black.png') 
+      else
+          #image_tag('bullet_black.png')
+          image_tag('sub.gif')          
+      end
+    %>
+  <% end %>
+</span>
+
+<span class="todo-content <%= todo.done ? 'done' :'' %>">
+
+  <% if todo.done %>
+    <span class=date title="date completed">
+      <%= format_date(todo.completed_at) %>
+    </span>
+  <% end %>
+  <span class="text todo-has-children-<%= todo.children.any? %>">
+    <%= textilizable(todo.text) %>
+  </span>
+  <span class=notes>
+    <% if todo.due %>
+      <span class=due><%=l(:todo_due_label)%> <%= format_date(todo.due) %></span>
+    <% end %>
+    <% if todo.assigned_to %>
+      <span class=assigned><%=l(:todo_assigned_label)%>  <%= todo.assigned_to.name %></span>
+    <% end %>
+    <% if todo.refers_to and controller.controller_name != 'issues' %>
+      <span class=refers>
+        <%=l(:todo_ref_label)%>
+        <%= link_to "##{ todo.refers_to.id}", 
+                {:controller => :issues, :action => :show, :id => todo.refers_to.id},
+                 :title => "#{todo.refers_to.tracker.name}: #{todo.refers_to.subject}",
+		 :skip_relative_url_root => true %>
+      </span>
+    <% end %>
+  </span>
+</span>
+<div id='todo<%= todo.id %>-new-box'></div>
+
+    
+    <ul class="todos children depth<%= todo.ancestors.size%>" id='<%= TodosController::UL_ID + todo.id.to_s %>' >
+      <% for child_todo in todo.children %>
+          <%= render :partial => 'todos/todo_li', :locals => {:todo => child_todo, :editable => editable} %>
+      <% end %>
+      <% if todo.children.empty?   %>
+        <li><ul style='min-height:1px; '></ul></li>
+      <% end %>
+    </ul>
+
+    
+
+  
+
+
+
+
