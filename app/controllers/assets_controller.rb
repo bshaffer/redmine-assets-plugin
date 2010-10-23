@@ -42,8 +42,9 @@ class AssetsController < ApplicationController
     else
       @assets   = Attachment.find(:all, {
         :conditions => conditions, 
-        :joins      => joins.join(' ')},
-        :order      => "attachments.filename ASC")
+        :joins      => joins.join(' '),
+        :order      => "attachments.filename ASC"})
+        
     end
   end
 

@@ -3,7 +3,7 @@
   <% if !@types.blank? %>
   <ul class="assets-list">
     <% for type in @types %>
-      <li><%= link_to type, assets_by_type_path(:type => type, :project_id => params[:project_id]) %></li>
+      <li><%= link_to "#{type} Assets", assets_by_type_path(:type => type, :project_id => params[:project_id]) %></li>
     <% end %>
   </ul>
   <% else %>

@@ -27,3 +27,6 @@ Message:
     
   joins:      boards on board_id = boards.id
   project_id: boards.project_id
+  
+Version:
+  project_id: versions.project_id
