@@ -41,7 +41,7 @@ Redmine::Plugin.register :redmine_priorities_plugin do
   # }, :partial => 'settings/settings'
     
   project_module :asset_lists do
-    permission :view_asset, {:assets => [:index, :show] }
+    permission :view_asset, {:assets => [:index, :by_type] }
       
     permission :edit_asset,
       {:asset => [:create, :destroy, :new, :toggle_complete, :sort, :edit, :update],

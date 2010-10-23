@@ -8,4 +8,6 @@ ActionController::Routing::Routes.draw do |map|
     :member => {:toggle_complete => :post }, :collection => {:sort => :post}
   
   map.assets 'assets', :controller => :assets, :action => :index
+  
+  map.assets_by_type '/projects/:project_id/assets/:type/type', :controller => :assets, :action => :by_type
 end
