@@ -6,9 +6,9 @@
 <% for attachment in attachments %>
   <% if category_relation %>
     <% category = eval "attachment.container.#{category_relation}" %>
-    <% if(current_category != category.to_s) %>
-      <h3><%= category.to_s %></h3>
-      <% current_category = category.to_s %>
+    <% if(current_category != category) %>
+      <h3><%= category %></h3>
+      <% current_category = category %>
     <% end %>
   <% end %>
 

@@ -7,7 +7,7 @@ Overview
 --------
 
 This will enable the `Assets` tab in your project.  The assets tab groups assets by your different asset types.
-The asset types currently supported are `Issues`, `Messages`, `Documents`, and `Versions` (from the Files module).
+The asset types currently supported are `Issues`, `Messages`, `Documents`, `Versions` (from the Files module), and `WikiPages`.
 Only the types that have uploaded files in the current project will be displayed.  Drilling down into an asset type 
 will show an alphabetical list of assets, grouped by category if applicable.
 

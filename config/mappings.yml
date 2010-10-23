@@ -30,3 +30,14 @@ Message:
   
 Version:
   project_id: versions.project_id
+  
+WikiPage:
+  category:
+    id:       id
+    relation: title
+    table:    wiki_pages
+    name:     wiki_pages.title
+    
+  joins:      wikis on wiki_id = wikis.id
+  project_id: wikis.project_id
+  
