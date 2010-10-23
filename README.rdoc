@@ -1,10 +1,9 @@
 = Assets plugin for redmine
 
-Provides a central location to view all your project's assets in a single location
+Provides a central location to view all your project's assets
 
 = Requirements
-* Redmine 0.8.5 or later (may work on earlier versions, but not tested for it) - Works best on 0.9.x
-* Rails 2.2.1 or greater (NOTE - if you are on 0.8.x, you will have to manually install a newer rails version & edit your config/enviroment.rb)
+* Rails 2.2.1 or greater
 
 == Installation 
 0. Follow the Redmine plugin installation steps at: http://www.redmine.org/wiki/redmine/Plugins 

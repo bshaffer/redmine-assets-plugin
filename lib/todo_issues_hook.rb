@@ -1,6 +1,6 @@
 # Hooks to attach to the Redmine Todos List in the issue view.
 
-class TodoIssuesHook < Redmine::Hook::ViewListener
+class AssetsHook < Redmine::Hook::ViewListener
 
   # Renders an additional table to the issue details bottom
   #
@@ -19,7 +19,7 @@ class TodoIssuesHook < Redmine::Hook::ViewListener
 
     if (controller.class.name == 'ProjectsController' and action_name == 'activity')
       o = ""
-      o << stylesheet_link_tag('todos', :plugin => 'redmine_priorities_plugin')
+      o << stylesheet_link_tag('todos', :plugin => 'redmine_assets_plugin')
       return o
     end
   end
