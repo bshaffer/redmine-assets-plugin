@@ -1,45 +1,6 @@
 #Assets English locale File for Rails >= 2.2.2
 en:
-  label_asset_plural: Assets
-  assets_title: My Assets
-  
-  asset_sort_no_project_error: "cant sort without a project!"
-  asset_project_not_found_error: "Project not found!"
-  asset_new_missing_update_target_error: "You need an update_target!!"
-  
-  myassets_heading: My Personal Assets
-  myassets_edit_project_tooltip: "Edit the assets for this project"
-  
-  asset_new_done_link: Done adding assets
-  asset_new_due_label: Due
-  asset_new_or_label: or
-  asset_new_create_button: Create Asset
-  asset_new_issue_tooltip: refers to
-  asset_new_assign_to_tooltip: assign to
-  
-  assets_project_heading: Assets for
-  assets_print_button_tooltip: Print this list
-  
-  asset_unmark_tooltip: Mark this asset (and children) as Incomplete
-  asset_mark_tooltip: Mark this asset (and children) as Done
-  asset_add_child_tooltip: 'add child to this asset'
-  asset_delete_tooltip: delete this asset (and children!)
-  
-  asset_due_label: "Due:"
-  asset_assigned_label: "Assigned to:"
-  asset_ref_label: "Ref:"
-  
-  project_module_asset_lists: Asset Lists
-  
-  permission_view_assets: View Asset Lists
-  permission_edit_assets: Edit Asset Lists
-  permission_use_personal_assets: Use personal Asset Lists
-
-  label_related_assets: Related assets
-
-  asset_not_found_error: "Asset not found!"
-
-  label_asset: Asset
-  asset_status_done: Done
-  asset_status_new: New
-  asset_status_updated: Updated
+  asset_project_not_found_error:  "Project not found!"
+  assets_project_heading:         Assets for
+  label_asset_plural:             Assets
+  assets_title:                   My Assets

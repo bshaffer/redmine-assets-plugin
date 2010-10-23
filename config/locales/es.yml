@@ -1,48 +1,6 @@
-#Todos en locacles file
+#Assets en locacles file
 es:
-  label_asset_plural: Tareas Pendientes
-  assets_title: Mis Tareas Pendientes
-
-  #cant sort without a project!
-  asset_sort_no_project_error: "No se puede ordenar sin un proyecto" 	
-  #Project not found!
-  asset_project_not_found_error: "No se ha encontrado el proyecto"
-  #You need an update_target!!
-  asset_new_missing_update_target_error: "Se necesita un update_target"	
-
-
-  #My Personal Todos
-  assets_heading: Mis Tareas Pendientes
-  #Edit the assets for this project
-  assets_edit_project_tooltip: "Editar las tareas pendientes de este proyecto"
-
-  #Done adding assets
-  asset_new_done_link: Terminar añadir tareas pendientes
-  #Due
-  asset_new_due_label: Entrega
-  #or
-  asset_new_or_label: o
-  #Create Todo
-  asset_new_create_button: Crear Tarea Pendiente
-  #refers to
-  asset_new_issue_tooltip: se refiere a
-  #assign to
-  asset_new_assign_to_tooltip: asignar a
-
-  #Todos for
-  assets_project_heading: Tareas pendientes para
-  #Print this list
-  assets_print_button_tooltip: Imprimir esta lista
-  #Mark this asset(and children) as Uncomplete
-  asset_unmark_tooltip: Marcar esta Tarea Pendiente (y sus hijas) como Incompleta
-  #Mark this asset(and children) as Done
-  asset_mark_tooltip: Marcar esta Tarea Pendiente (y sus hijas) como Terminada
-  #'add child to this asset'
-  asset_add_child_tooltip: 'Añadir una Tarea hija'
-  #delete this asset(and children!)
-  asset_delete_tooltip: borrar esta Tarea Pendiente (y sus hijas)
-  #"Due:"
-  asset_due_label: "Entrega:"
-  #"Assigned to:"
-  asset_assigned_label: "Asignada a:"
-  asset_ref_label: "Relacionada con petición:"
+  asset_project_not_found_error:  "Project not found!"
+  assets_project_heading:         Assets for
+  label_asset_plural:             Assets
+  assets_title:                   My Assets

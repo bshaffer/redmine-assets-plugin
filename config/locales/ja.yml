@@ -1,45 +1,6 @@
 #Assets Japanese locale File for Rails >= 2.2.2
 ja:
-  label_asset_plural: Assetリスト
-  assets_title: マイAssetリスト
-
-  asset_sort_no_project_error: "プロジェクトなしでソートすることはできません!"
-  asset_project_not_found_error: "プロジェクトが見つかりません!"
-  asset_new_missing_update_target_error: "更新対象が必要です!!"
-
-  assets_heading: マイAssetリスト
-  assets_edit_project_tooltip: "このプロジェクトのAssetの編集"
-
-  asset_new_done_link: Assetを追加しました。
-  asset_new_due_label: 期限
-  asset_new_or_label: or
-  asset_new_create_button: Assetの作成
-  asset_new_issue_tooltip: 参照先
-  asset_new_assign_to_tooltip: 担当者
-
-  assets_project_heading: Assets for
-  assets_print_button_tooltip: このリストの印刷
-
-  asset_unmark_tooltip: このAsset(と関連するAsset)を未完了に戻す
-  asset_mark_tooltip: このAsset(と関連するAsset)を完了する
-  asset_add_child_tooltip: このAssetに関連するAssetを追加する
-  asset_delete_tooltip: このAsset(と関連するAsset)を削除する
-
-  asset_due_label: "期限:"
-  asset_assigned_label: "担当者:"
-  asset_ref_label: "参照先:"
-
-  project_module_asset_lists: Assetリスト
-
-  permission_view_assets: View Asset Lists
-  permission_edit_assets: Edit Asset Lists
-  permission_use_personal_assets: Use personal Asset Lists
-
-  label_related_assets: 関連するAsset
-
-  asset_not_found_error: "Assetが見つかりません!"
-
-  label_asset: Asset
-  asset_status_done: Done
-  asset_status_new: New
-  asset_status_updated: Updated
+  asset_project_not_found_error:  "Project not found!"
+  assets_project_heading:         Assets for
+  label_asset_plural:             Assets
+  assets_title:                   My Assets

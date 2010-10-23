@@ -68,7 +68,7 @@ class AssetsController < ApplicationController
  
   def find_project
     @project = Project.find(params[:project_id])
-    raise ActiveRecord::RecordNotFound, l(:todo_project_not_found_error) + " id:" + params[:project_id] unless @project
+    raise ActiveRecord::RecordNotFound, l(:asset_project_not_found_error) + " id:" + params[:project_id] unless @project
   end
   
   def asset_types

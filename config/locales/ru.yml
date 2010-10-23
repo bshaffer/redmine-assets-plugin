@@ -1,41 +1,6 @@
-#Todos Russian locale File for Rails >= 2.2.2
+#Assets Russian locale File for Rails >= 2.2.2
 ru:
-  label_asset_plural: Списки задач
-  project_assets_title: Заметки
-  assets_title: Заметки к выполнению
-  
-  asset_sort_no_project_error: "нет возможности сортировки без указания проекта"
-  asset_project_not_found_error: "Проект не найден!"
-  asset_new_missing_update_target_error: "Вам необходимо update_target!!"
-  
-  assets_heading: Мои личные заметки к выполнению
-  assets_edit_project_tooltip: "Редактирование заметок для текущего проекта"
-  
-  asset_new_done_link: Добавление заметки выполнено
-  asset_new_due_label: к дате
-  asset_new_or_label: или
-  asset_new_create_button: Создать заметку
-  asset_new_issue_tooltip: связана с
-  asset_new_assign_to_tooltip: назначена на
-  
-  assets_project_heading: Заметки для
-  assets_print_button_tooltip: Печать текущего списка
-  
-  asset_unmark_tooltip: Пометить эту заметку (и все подчиненные) как Невыполненные
-  asset_mark_tooltip: Пометить эту заметку (и все подчиненные) как Выполненную
-  asset_add_child_tooltip: 'добавить подзаметку к текущей'
-  asset_delete_tooltip: Удалить текущую заметку (и подчиненные)
-  
-  asset_due_label: "К дате:"
-  asset_assigned_label: "Назначена на:"
-  asset_ref_label: "Связана с:"
-  
-  project_module_asset_lists: Списки заметок
-  
-  permission_view_project_asset_lists: Просмотр списков заметок
-  permission_edit_project_asset_lists: Редактирование списков заметок
-  permission_use_personal_asset_lists: Использовать свой список заметок
-  
-  
-  
-  
+  asset_project_not_found_error:  "Project not found!"
+  assets_project_heading:         Assets for
+  label_asset_plural:             Assets
+  assets_title:                   My Assets

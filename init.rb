@@ -1,45 +1,11 @@
 require 'redmine'
 
-# Hooks
-# require_dependency 'asset_issues_hook'
-
-# Patche# s to the Redmine core
-# require 'dispatcher'
-# 
-# Dispatcher.to_prepare do
-#   require_dependency 'project'
-#   require_dependency 'user'
-# 
-#   #application.rb changed names between rails verisons - hack for backwards compatibility
-#   begin
-#     require_dependency 'application_controller'
-#   rescue MissingSourceFile
-#     require_dependency 'application'
-#   end
-# 
-#   #This file loads some associations into the core redmine classes, like associations to assets.
-#     require 'patch_redmine_classes'
-#   require 'asset_issues_controller_patch'
-# 
-#   # Add module to Project.
-#   Project.send(:include, TodosProjectPatch)
-# 
-#   # Add module to User, once.
-#   User.send(:include, TodosUserPatch)
-# 
-#   IssuesController.send(:include, TodoIssuesControllerPatch)
-# end
-
 Redmine::Plugin.register :redmine_priorities_plugin do
   name 'Redmine Assets plugin'
   author 'centresource interactive agency'
   description 'Provides a central location to view all your project\'s assets.'
   version '0.0.1'
   
-  # settings :default => {
-  #   'assets_auto_complete_parent' => false
-  # }, :partial => 'settings/settings'
-    
   project_module :asset_lists do
     permission :view_asset, {:assets => [:index, :by_type] }
       
