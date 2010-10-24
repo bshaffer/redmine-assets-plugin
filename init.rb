@@ -13,13 +13,7 @@ Redmine::Plugin.register :redmine_priorities_plugin do
       {:asset => [:create, :destroy, :new, :toggle_complete, :sort, :edit, :update],
         :issues => [:create, :destroy, :new, :toggle_complete, :sort, :edit, :update]}
   end
- 
-  menu :top_menu, :assets, { :controller => 'assets', :action => 'index' }, 
-    :caption => :assets_title,
-    :if => Proc.new {
-      User.current.allowed_to?(:use_personal_assets, nil, :global => true)
-    }
-     
+      
   menu :project_menu, :assets, {:controller => 'assets', :action => 'index'}, 
       :caption => :label_asset_plural, :after => :new_issue, :param => :project_id
 
