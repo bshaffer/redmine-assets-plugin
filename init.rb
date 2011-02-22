@@ -16,8 +16,6 @@ Redmine::Plugin.register :redmine_priorities_plugin do
       
   menu :project_menu, :assets, {:controller => 'assets', :action => 'index'}, 
       :caption => :label_asset_plural, :after => :new_issue, :param => :project_id
-
-  activity_provider :assets, :default => false
 end
 
 #fix required to make the plugin work in devel mode with rails 2.2
