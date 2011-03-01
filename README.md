@@ -56,6 +56,11 @@ This will display the assets for class NewAssetType with a project_id field and 
 Screenshots
 -----------
 
+When you click the **Assets** Tab in your project, you will see all the content types in your project that have assets uploaded to them:
 ![Asset Landing Page](http://brentertainment.com/other/screenshots/redmine_assets_plugin_landing.png)
+
+If anyone has attached any files to the **Document** content type, they will be listed here, organized by Document Category
 ![Document Assets](http://brentertainment.com/other/screenshots/redmine_assets_plugin_documents.png)
+
+All files attached to **Issues** will be listed here, organized by Issue Category
 ![Issue Assets](http://brentertainment.com/other/screenshots/redmine_assets_plugin_issues.png)
