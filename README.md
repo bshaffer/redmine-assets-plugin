@@ -52,3 +52,10 @@ As a bare minimum, the mappings.yml file requires the name of the asset type, fo
     NewAssetType: {}
     
 This will display the assets for class NewAssetType with a project_id field and no categories.
+
+Screenshots
+-----------
+
+![Asset Landing Page](http://brentertainment.com/other/screenshots/redmine_assets_plugin_landing.png)
+![Document Assets](http://brentertainment.com/other/screenshots/redmine_assets_plugin_documents.png)
+![Issue Assets](http://brentertainment.com/other/screenshots/redmine_assets_plugin_issues.png)
