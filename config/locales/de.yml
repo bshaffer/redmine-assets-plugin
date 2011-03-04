@@ -1,5 +1,5 @@
 #language file for de - post rails 2.2.2
 de:
-  asset_project_not_found_error:  "Project not found!"
-  assets_project_heading:         Assets for
-  label_asset_plural:             Assets
+  asset_project_not_found_error: "Projekte nicht gefunden!" 
+  assets_project_heading: Assets für 
+  label_asset_plural: Assets
