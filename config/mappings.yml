@@ -1,14 +1,14 @@
 # Tells plugin where to find project_id and asset category on each item
 
 Document:
-  category:   
+  category:
     id:       category_id
     relation: category
     name:     name
     table:    enumerations
-    
+
   joins:      enumerations on documents.category_id = enumerations.id AND type='DocumentCategory'
-  
+
 Issue:
   category:
     id:       category_id
@@ -17,27 +17,27 @@ Issue:
     table:    issue_categories
 
   joins:      issue_categories on issues.category_id = issue_categories.id
-      
+
 Message:
   category:
     id:       board_id
     relation: board
     table:    boards
     name:     name
-    
+
   joins:      boards on board_id = boards.id
   project_id: boards.project_id
-  
+  i18n:       label_board
+
 Version:
   project_id: versions.project_id
-  
+
 WikiPage:
   category:
     id:       id
     relation: title
     table:    wiki_pages
     name:     wiki_pages.title
-    
+
   joins:      wikis on wiki_id = wikis.id
   project_id: wikis.project_id
-  

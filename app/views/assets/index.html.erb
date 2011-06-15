@@ -3,7 +3,7 @@
   <% if !@types.blank? %>
   <ul class="assets-list">
     <% for type in @types %>
-      <li><%= link_to l('label_'+type.underscore) + ' ' + l(:label_asset_plural), assets_by_type_path(:type => type, :project_id => params[:project_id]) %></li>
+      <li><%= link_to l(@mappings[type]['i18n'].nil? ? 'label_'+type.underscore : @mappings[type]['i18n']) + ' ' + l(:label_asset_plural), assets_by_type_path(:type => type, :project_id => params[:project_id]) %></li>
     <% end %>
   </ul>
   <% else %>
