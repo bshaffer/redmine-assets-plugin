@@ -1,5 +1,5 @@
 <div id="project-assets">
-  <h2><%= @type %> <%= l(:assets_project_heading) %> <%= @project.name %></h2>
+  <h2><%= l('label_'+@type.underscore) %> <%= l(:assets_project_heading) %> <%= @project.name %></h2>
   <div style="" >
     
     <%= render :partial => 'assets/links', :locals => {:attachments => @assets, :options => @options, :category_relation => @mapping['category'].nil? ? nil : @mapping['category']['relation']} %>

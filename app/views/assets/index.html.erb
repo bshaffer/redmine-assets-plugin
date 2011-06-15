@@ -3,12 +3,10 @@
   <% if !@types.blank? %>
   <ul class="assets-list">
     <% for type in @types %>
-      <li><%= link_to "#{type} Assets", assets_by_type_path(:type => type, :project_id => params[:project_id]) %></li>
+      <li><%= link_to l('label_'+type.underscore) + ' ' + l(:label_asset_plural), assets_by_type_path(:type => type, :project_id => params[:project_id]) %></li>
     <% end %>
   </ul>
   <% else %>
-    <em>No assets have been added</em>
+    <em><%= l(:no_assets_added) %></em>
   <% end %>
 </div>
-
-
