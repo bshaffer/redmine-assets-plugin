@@ -25,7 +25,7 @@ class AssetsController < ApplicationController
     
     # Add extra joins if applicable (for categories or project ID)
     if !@mapping['joins'].nil?
-      joins << "INNER JOIN #{@mapping['joins']}"
+      joins << "LEFT JOIN #{@mapping['joins']}"
     end
     
     # Every type will have these conditions
