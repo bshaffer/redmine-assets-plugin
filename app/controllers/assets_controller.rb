@@ -64,7 +64,7 @@ class AssetsController < ApplicationController
        wheres << "(#{mapping['project_id']} = #{@project.id})"
      end
 
-     return Attachment.find(:all, {:group => "container_type", :conditions => wheres.join(' OR '), :joins => joins.join(' ')}).collect(&:container_type).compact
+     return Attachment.find(:all, {:select => "container_type", :group => "container_type", :conditions => wheres.join(' OR '), :joins => joins.join(' ')}).collect(&:container_type).compact
   end
  
   def find_project
