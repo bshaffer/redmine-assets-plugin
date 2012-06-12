@@ -20,8 +20,10 @@ end
 
 #fix required to make the plugin work in devel mode with rails 2.2
 # as per http://www.ruby-forum.com/topic/171629
-load_paths.each do |path|
-  ActiveSupport::Dependencies.load_once_paths.delete(path)
+if defined? load_paths
+	load_paths.each do |path|
+	  ActiveSupport::Dependencies.load_once_paths.delete(path)
+	end
 end
 
 
