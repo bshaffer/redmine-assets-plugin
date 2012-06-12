@@ -21,8 +21,7 @@ Installation
 
 0. Follow the Redmine plugin installation steps at: [http://www.redmine.org/wiki/redmine/Plugins](http://www.redmine.org/wiki/redmine/Plugins)
 1. Cd to your redmine `plugins/` dir (Redmine 2.x) or your `vendor/plugins/` dir (Redmine 1.x).
-2. Git-clone the plugin from this repo into a folder in there: `git clone git://github.com/bshaffer/redmine-assets-plugin.git redmine_assets_plugin`
-** *You must name your directory with underscores as shown above, or the plugin will throw a fatal error*
+2. Git-clone the plugin from this repo into a folder in there: `git clone git://github.com/bshaffer/redmine-assets-plugin.git redmine_assets_plugin` (*You must name your directory with underscores as shown here, or the plugin will throw a fatal error*)
 3. Run the plugin migrations `rake db:migrate_plugins`
 4. Restart your Redmine web servers (e.g. mongrel, thin, mod_rails)
 5. Login to your Redmine install as an Administrator
