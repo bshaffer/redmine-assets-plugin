@@ -1,8 +1,10 @@
 require 'redmine'
 
-Redmine::Plugin.register :redmine_priorities_plugin do
+Redmine::Plugin.register :redmine_assets_plugin do
   name 'Redmine Assets plugin'
-  author 'centresource interactive agency'
+  author 'Brent Shaffer'
+  url 'https://github.com/bshaffer/redmine-assets-plugin'
+  author_url 'http://brentertainment.com'
   description 'Provides a central location to view all your project\'s assets.'
   version '0.0.1'
   

@@ -1,6 +1,3 @@
-#require 'ruby-debug'
-
-
 class AssetsController < ApplicationController
 
   before_filter :authorize, :asset_types
