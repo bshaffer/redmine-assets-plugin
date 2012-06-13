@@ -1,0 +1,6 @@
+#Assets English locale File for Rails >= 2.2.2
+cs:
+  asset_project_not_found_error:  "Projekt nebyl nalezen!"
+  assets_project_heading:         Přílohy pro
+  label_asset_plural:             Přílohy
+  no_assets_added:                Žádné přílohy nebyly nalezeny
