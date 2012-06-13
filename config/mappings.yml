@@ -32,6 +32,9 @@ Message:
 Version:
   project_id: versions.project_id
 
+Project:
+  project_id: projects.id
+
 WikiPage:
   category:
     id:       id
