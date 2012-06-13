@@ -18,7 +18,7 @@
   <% if options[:deletable] %>
     <%= link_to image_tag('delete.png'), {:controller => 'attachments', :action => 'destroy', :id => attachment},
                                          :confirm => l(:text_are_you_sure),
-                                         :method => :post,
+                                         :method => (Redmine::VERSION::MAJOR > 1 || (Redmine::VERSION::MAJOR == 1 && Redmine::VERSION::MINOR >= 3) ? :delete : :post),
                                          :class => 'delete',
                                          :title => l(:button_delete) %>
   <% end %>
