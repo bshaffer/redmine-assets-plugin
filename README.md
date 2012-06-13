@@ -14,15 +14,15 @@ will show an alphabetical list of assets, grouped by category if applicable.
 Requirements
 ------------
 
-* Rails 2.2.1 or greater
+* Rails 3
 
 Installation 
 ------------
 
 0. Follow the Redmine plugin installation steps at: [http://www.redmine.org/wiki/redmine/Plugins](http://www.redmine.org/wiki/redmine/Plugins)
-1. Cd to your redmine `plugins/` dir (Redmine 2.x) or your `vendor/plugins/` dir (Redmine 1.x).
+1. Cd to your redmine `plugins/` dir
 2. Git-clone the plugin from this repo into a folder in there: `git clone git://github.com/bshaffer/redmine-assets-plugin.git redmine_assets_plugin` (*You must name your directory with underscores as shown here, or the plugin will throw a fatal error*)
-3. Run the plugin migrations `rake db:migrate_plugins`
+3. Run the plugin migrations `rake redmine:plugins:migrate`
 4. Restart your Redmine web servers (e.g. mongrel, thin, mod_rails)
 5. Login to your Redmine install as an Administrator
 6. Setup the permissions for the assets module for your roles

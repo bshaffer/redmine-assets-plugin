@@ -1,13 +1,5 @@
 #custom routes for this plugin
-ActionController::Routing::Routes.draw do |map|
-
-  map.resources :assets, :name_prefix => 'project_', :path_prefix => '/projects/:project_id',
-    :member => {:toggle_complete => :post }, :collection => {:sort => :post}
-  
-  map.resources :assets, :name_prefix => 'user_', :path_prefix => '/users/:user_id', :controller => :assets,
-    :member => {:toggle_complete => :post }, :collection => {:sort => :post}
-  
-  map.assets 'assets', :controller => :assets, :action => :index
-  
-  map.assets_by_type '/projects/:project_id/assets/:type/type', :controller => :assets, :action => :by_type
+RedmineApp::Application.routes.draw do
+  match '/projects/:project_id/assets' => 'assets#index', :via => [:get], :as => 'assets'
+  match '/projects/:project_id/assets/:type/type' => 'assets#by_type', :as => 'assets_by_type', :via => [:get]
 end

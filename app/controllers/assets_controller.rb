@@ -1,6 +1,3 @@
-#require 'ruby-debug'
-
-
 class AssetsController < ApplicationController
 
   before_filter :authorize, :asset_types
@@ -14,7 +11,7 @@ class AssetsController < ApplicationController
     @type     = params[:type];
     
     # Forward 404 if type does not exist in the mapping
-    @mappings[@type].nil? rescue return render :file => "#{RAILS_ROOT}/public/404.html", :status => 404
+    @mappings[@type].nil? rescue return render :file => "#{Rails.root}/public/404.html", :status => 404
 
     @mapping  = @mappings[@type];
     table_name    = (eval @type).table_name
@@ -74,7 +71,7 @@ class AssetsController < ApplicationController
   
   def asset_types
     require 'yaml'
-    @mappings = YAML::load(File.open("#{RAILS_ROOT}/vendor/plugins/redmine_assets_plugin/config/mappings.yml"))
+    @mappings = YAML::load(File.open("#{Rails.root}/plugins/redmine_assets_plugin/config/mappings.yml"))
     # set defaults
     @mappings.each_pair do |type, mapping|
        table    = (eval type).table_name
