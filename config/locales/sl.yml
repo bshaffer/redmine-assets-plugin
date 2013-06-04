@@ -1,0 +1,6 @@
+#Assets English locale File for Rails >= 2.2.2
+sl:
+  asset_project_not_found_error:  "Projekt ne obstaja!"
+  assets_project_heading:         Priponke za
+  label_asset_plural:             Priponke
+  no_assets_added:                Priponke niso dodane
