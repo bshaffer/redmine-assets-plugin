@@ -20,7 +20,7 @@ Redmine::Plugin.register :redmine_assets_plugin do
       
     permission :edit_asset,
       {:asset => [:create, :destroy, :new, :toggle_complete, :sort, :edit, :update],
-        :issues => [:create, :destroy, :new, :toggle_complete, :sort, :edit, :update]}
+        :issues => [:edit, :update]}
   end
       
   menu :project_menu, :project_assets, {:controller => 'assets', :action => 'index'}, :caption => :label_asset_plural, :after => :new_issue, :param => :project_id
